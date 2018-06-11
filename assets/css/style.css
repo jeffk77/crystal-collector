@@ -1,0 +1,135 @@
+
+/* font-family: 'Comfortaa', cursive;
+font-family: 'Orbitron', sans-serif; */
+
+h1 h2 h3 h4 h5 h6 p {
+    font-family: 'Comfortaa', cursive;
+}
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.75em;
+}
+
+p {
+    font-size: 1em;
+    color: #777777;
+}
+
+body {
+    background-image: url("/assets/images/nebula.jpg");
+}
+#container {
+    width: 960px;
+    height: 100%;
+    text-align: center;
+    margin: 100px auto 100px auto;
+    background-color: white;
+    box-shadow: 0px 0px 5px 5px rgb(87, 87, 87);
+    padding-top: 30px;
+    padding-bottom: 75px;
+}
+header {
+    height: 150px;
+    text-align: center;
+}
+#headerbar {
+    height: 50px;
+    background-color: rgb(14, 22, 90);
+    margin: 50px 0 50px 0;
+    text-align: center;
+    width: 100%;
+}
+#titlebox {
+    border: 10px solid rgb(4, 0, 58);
+    color: black;
+    background-color: white;
+    padding: 30px;
+    margin-top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5em;
+    height: 110px;
+}
+#computerDiv {
+    margin: auto;
+}
+#screenDiv {
+    margin-top: -375px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    padding: 20px;
+}
+#computerChoiceBox {
+    background-color: rgb(17, 17, 141);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 4em;
+    margin: 25px auto 0 auto;
+    box-shadow: 0px 0px 5px 5px black;
+}
+#scoreBoard {
+    border-radius: 20px;
+    border: 10px white solid;
+    width: 90%;
+    height: 80%;
+    text-align: left;
+    padding: 30px;
+    background-color: black;
+    color: rgb(41, 202, 41);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 5px 5px black;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#computer {
+    width: 500px;
+}
+#guessingBoard {
+    margin-top: 50px;
+}
+#userguessDiv {
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px double black;
+    border-radius: 20px;
+}
+#guessLeft {
+    background-color: rgb(94, 6, 42);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 4em;
+    margin: 25px auto 0 auto;
+    box-shadow: 0px 0px 5px 5px black;
+}
+#lettersGuessed {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
