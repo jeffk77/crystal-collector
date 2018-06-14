@@ -35,8 +35,9 @@ p {
 }
 
 body {
-    background-color: black;
+    background-image: url("../images/wood.jpg");
 }
+
 #gamescreen {
     width: 960px;
     height: 700px;
@@ -44,16 +45,21 @@ body {
     border-radius: 10px;
     border: 5px solid red;
     margin: 10% auto 10% auto;
+    box-shadow: 0 0 5px 5px black;
 }
+
 #leftcolumn {
     padding: 20px;
 }
+
 #rightcolumn {
     padding: 20px;
 }
+
 #logo {
     width: 350px;
 }
+
 #scoreboard {
     background-color: black;
     border: 5px solid green;
@@ -63,6 +69,72 @@ body {
     font-family: 'Orbitron', sans-serif;
     color: rgb(4, 196, 4);
 }
+
+#randomnumberBox {
+    width: 150px;
+    height: auto;
+    padding: 20px;
+    background-color: black;
+    border: 3px solid green;
+    color: white;
+    margin: 50px auto 50px auto;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+}
+
+#usernumberBox {
+    width: 150px;
+    height: auto;
+    padding: 20px;
+    background-color: black;
+    border: 3px solid blue;
+    color: white;
+    margin: 50px auto 50px auto;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+}
+
 #diamondrow {
-    width: 300px;
+    width: 375px;
+}
+
+#rightwindow {
+    border: 1px dashed red;
+    height: 100%;
+    margin: 0;
+}
+
+.diamondbutton {
+    height: 115px;
+}
+
+.diamondimg {
+    width: 100px;
+}
+
+#button1num, #button2num, #button3num, #button4num {
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    margin: auto;
+}
+
+#scoresheet {
+    margin: 50px 0 0 0;
+}
+
+#wins, #losses {
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    border: 3px solid red;
+    color: white;
+    border-radius: 50px;
+    font-size: 0.75em;
 }

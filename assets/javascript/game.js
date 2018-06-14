@@ -1,65 +1,71 @@
-var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var yourScore = document.getElementById('yourScore');
+//var yourScore = getElementById(red, blue, yellow, green.onclick(math.sum));
+yourScore.innerHTML = 0; //
+var targetScore = document.getElementById('targetScore');
+targetScore.innerHTML = getRandomValue(10, 4);
 
-var wins = 0;
-var losses = 0;
-var guesses = 10;
-var remainingGuesses = 10;
-var guessedLetters = [];
-
-// Randomly chooses a choice from the letters array. This is the Computer's choice.
-var compChoice = letters[Math.floor(Math.random() * letters.length)];
-
-// Creates updateGuessesLeft variable, using a function that puts the value of remainingGuesses into the #guessLeft div.
-var updateGuessesLeft = function () {
-    document.querySelector('#guessLeft').innerHTML = remainingGuesses;
+function addToScore(val) {
+  var numberToAdd = parseInt(val);
+  var currentScore = parseInt(yourScore.innerHTML);
+  yourScore.innerHTML = numberToAdd + currentScore;
 }
 
-// Creates updateLetterToGuess variable, using a function that put a random letter into the compChoice variable.
-var updateLetterToGuess = function () {
-    this.compChoice = this.letters[Math.floor(Math.random() * this.letters.length)];
-};
+var red = document.getElementById("red");
+//red.setAttribute("value", "5");
+console.log(red.value);
 
-// Creates updateGuessesSoFar variable, using an array of values based on the user's inputted guesses.
-var updateGuessesSoFar = function () {
-    document.querySelector('#lettersGuessed').innerHTML = "Letters You've Guessed: " + guessedLetters.join(', ');
-};
+var blue = document.getElementById("blue");
+//console.log(blue.value);
 
-// Resets the game after a win or loss. Restarts the initial values, 
-var reset = function () {
-    guesses = 10;
-    remainingGuesses = 10;
-    guessedLetters = [];
-    document.querySelector("#computerChoiceBox").innerHTML = "?";
-    compChoice = letters[Math.floor(Math.random() * letters.length)];
+var yellow = document.getElementById("yellow");
+//console.log(yellow.value);
+
+var green = document.getElementById("green");
+//console.log(green.value);
+
+// add an event listener to elements
+red.addEventListener('click', function() {
+  //this refers to red
+  addToScore(this.value);
+  checkPlayerScore();
+});
+
+
+blue.addEventListener('click', function() {
+  // this refers to blue
+  addToScore(this.value);
+  checkPlayerScore();
+});
+
+yellow.addEventListener('click', function() {
+  // this refers to blue
+  addToScore(this.value);
+  checkPlayerScore();
+});
+
+green.addEventListener('click', function() {
+  // this refers to blue
+  addToScore(this.value);
+  checkPlayerScore();
+});
+//var sum = parseInt(red.value) + parseInt(blue.value) + parseInt(yelow.value) + parseInt(green.value);
+
+// console.log (sum);
+function getRandomValue (a, b){
+  return Math.floor((Math.random() * a) + b);
 }
 
-// Response function set to the event of the user pressing a key.
-
-document.onkeyup = function (event) {
-
-    //subtracts from the number of remaining guesses.
-    remainingGuesses--;
-
-    //converts any letters entered into lowercase, to ensure a match to the letters array comparison
-    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-
-    //adds the guessed letters to the guessedLetters variable
-    guessedLetters.push(userGuess)
-    updateGuessesLeft();
-    updateGuessesSoFar();
-
-    //score and victory tracking
-    if (remainingGuesses > 0) {
-        if (userGuess == compChoice) {
-            wins++;
-            alert("Congrats! You're psychic!!");
-            document.querySelector("#wins").innerHTML = "Wins: " + wins;
-            reset();
-        }
-    } else if (remainingGuesses == 0) {
+function checkPlayerScore() {
+  //yourScore, targetScore (parseFloat() is for decimals)
+  var playerInt = parseInt(yourScore.innerHTML);
+  var targetInt = parseInt(targetScore.innerHTML);
+  if (playerInt === targetInt) {
+      alert('You win!');
+        wins++;
+  } else if (playerInt > targetInt) {
+    alert('You lose!');
         losses++;
-        alert("I'm sorry... turns out you're not psychic!");
-        document.querySelector('#losses').innerHTML = "Losses: " + losses;
-        reset();
-    };
-};
+  } 
+}
+
+console.log(getRandomValue(10, 4));
