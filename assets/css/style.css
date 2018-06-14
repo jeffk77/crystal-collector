@@ -30,13 +30,12 @@ h6 {
 }
 
 p {
-    font-size: 1em;
+    font-size: 0.75em;
     color: #777777;
 }
 
 body {
-    background-image: url("../images/diamondbackground.jpg");
-    background-size: cover;
+    background-color: black;
 }
 #gamescreen {
     width: 960px;
@@ -47,15 +46,13 @@ body {
     margin: 10% auto 10% auto;
 }
 #leftcolumn {
-    border: 1px dashed red;
     padding: 20px;
 }
 #rightcolumn {
-    border: 1px dashed green;
     padding: 20px;
 }
 #logo {
-    width: 300px;
+    width: 350px;
 }
 #scoreboard {
     background-color: black;
@@ -63,4 +60,9 @@ body {
     margin: 50px auto 50px auto;
     border-radius: 10px;
     padding: 20px;
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(4, 196, 4);
+}
+#diamondrow {
+    width: 300px;
 }
