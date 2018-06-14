@@ -2,9 +2,6 @@
 /* font-family: 'Comfortaa', cursive;
 font-family: 'Orbitron', sans-serif; */
 
-h1 h2 h3 h4 h5 h6 p {
-    font-family: 'Comfortaa', cursive;
-}
 h1 {
     font-size: 2em;
 }
@@ -70,71 +67,46 @@ body {
     color: rgb(4, 196, 4);
 }
 
-#randomnumberBox {
-    width: 150px;
-    height: auto;
-    padding: 20px;
-    background-color: black;
-    border: 3px solid green;
-    color: white;
-    margin: 50px auto 50px auto;
-    border-radius: 10px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3em;
-}
-
-#usernumberBox {
-    width: 150px;
-    height: auto;
-    padding: 20px;
-    background-color: black;
-    border: 3px solid blue;
-    color: white;
-    margin: 50px auto 50px auto;
-    border-radius: 10px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3em;
-}
-
 #diamondrow {
     width: 375px;
 }
 
-#rightwindow {
-    border: 1px dashed red;
-    height: 100%;
-    margin: 0;
-}
-
 .diamondbutton {
-    height: 115px;
-}
-
-.diamondimg {
-    width: 100px;
-}
-
-#button1num, #button2num, #button3num, #button4num {
-    border: 1px solid black;
-    text-align: center;
-    background-color: white;
-    width: 25px;
-    height: 25px;
-    border-radius: 50px;
-    margin: auto;
-}
-
-#scoresheet {
-    margin: 50px 0 0 0;
-}
-
-#wins, #losses {
+    padding: 20px;
     margin: 10px;
-    text-align: center;
-    padding: 10px;
+}
+
+#compnumWindow {
+    border: 5px dashed green;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-top: 10px;
+    font-size: 2.5em;
     background-color: black;
-    border: 3px solid red;
-    color: white;
+    color: green;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#usernumWindow {
+    border: 5px dashed red;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-top: 10px;
+    font-size: 2.5em;
+    background-color: black;
+    color: red;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.scoreBox {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+}
+
+.diamondvalue {
+    border: 1px solid black;
     border-radius: 50px;
-    font-size: 0.75em;
+    background-color: white;
+    box-shadow: 0 0 10px px gray;
 }

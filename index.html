@@ -21,6 +21,7 @@
 
     <div class="container">
         <div class="row" id="gamescreen">
+
             <div class="col-5" id="leftcolumn">
                 <img src="assets/images/crystalcollectorlogo.png" id="logo" />
                 <div class="row" id="scoreboard">
@@ -28,78 +29,62 @@
                     <p>You will be given a random number at the start of the game.
                         <p>There are four diamonds to the right. By clicking on a diamond, you will add a specific amount of
                             points to your total score.</p>
-                        <p>You win the game by matching your total score to the random number, you lose the game if your total score
-                            goes above the random number.</p>
+                        <p>You win the game by matching your total score to the random number, you lose the game if your total
+                            score goes above the random number.</p>
                         <p>The value of each diamond is hidden from you until you click on it.</p>
                         <p>Each time when the game starts, the game will change the values of each diamond.</p>
                 </div>
                 <img src="assets/images/diamondrow.png" id="diamondrow" />
             </div>
+
             <div class="col-7" id="rightcolumn">
-                <div class="row" id="rightwindow">
-                    <div class="col">
-                        <div class="row justify-content-md-center" id="randomnumberBox">
+
+                <div class="row justify-content-md-center">
+                    <div class="col-3 scoreBox">
+                        <h6>CPU SCORE</h6>
+                        <div class="row justify-content-md-center" id="compnumWindow">
                             00
                         </div>
-                        <div class="row justify-content-md-center" id="usernumberBox">
+                    </div>
+                    <div class="col-3 scoreBox">
+                        <h6>USER SCORE</h6>
+                        <div class="row justify-content-md-center" id="usernumWindow">
                             00
-                        </div>
-                        <div class="row">
-                            <div class="col-3 diamondbutton">
-                                <img src="assets/images/diamond1.png" class="diamondimg" id="button1">
-                                <div class="row">
-                                    <div id="button1num">
-                                        10
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-3 diamondbutton">
-                                <img src="assets/images/diamond2.png" class="diamondimg" id="button2">
-                                <div class="row">
-                                    <div id="button1num">
-                                        10
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-3 diamondbutton">
-                                <img src="assets/images/diamond3.png" class="diamondimg" id="button3">
-                                <div class="row">
-                                    <div id="button1num">
-                                        10
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-3 diamondbutton" id="diamondbutton">
-                                <img src="assets/images/diamond4.png" class="diamondimg" id="button4">
-                                <div class="row">
-                                    <div id="button1num">
-                                        10
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-md-center" id="scoresheet">
-                            <div class="col-2" id="wins">
-                                WINS:<br>00
-                            </div>
-                            <div class="col-2" id="losses">
-                                LOSSES:<br>00
-                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <script src="/assets/javascript/game.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+                <div class="row justify-content-md-center" id="gameWindow">
+                    <button class="diamondbutton" id="diamond1">
+                        <img src="assets/images/diamond1.png">
+                        <div class="diamondvalue" id="diamondvalue1"></div>
+                    </button>
+                    <button class="diamondbutton" id="diamond2">
+                        <img src="assets/images/diamond2.png">
+                        <div class="diamondvalue" id="diamondvalue2"></div>
+                    </button>
+                </div>
+                <div class="row justify-content-md-center">
+                    <button class="diamondbutton" id="diamond3">
+                        <img src="assets/images/diamond3.png">
+                        <div class="diamondvalue" id="diamondvalue3"></div>
+                    </button>
+                    <button class="diamondbutton" id="diamond4">
+                        <img src="assets/images/diamond4.png">
+                        <div class="diamondvalue" id="diamondvalue4"></div>
+                    </button>
+                </div>
+
+            </div>
+
+            <script src="/assets/javascript/game.js"></script>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+                crossorigin="anonymous"></script>
 
 </body>
 
