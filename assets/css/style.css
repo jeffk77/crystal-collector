@@ -76,7 +76,7 @@ body {
     margin: 10px;
 }
 
-#compnumWindow {
+#compNum {
     border: 5px dashed green;
     border-radius: 10px;
     padding: 20px 30px;
@@ -87,7 +87,7 @@ body {
     font-family: 'Orbitron', sans-serif;
 }
 
-#usernumWindow {
+#userNum {
     border: 5px dashed red;
     border-radius: 10px;
     padding: 20px 30px;
@@ -109,4 +109,16 @@ body {
     border-radius: 50px;
     background-color: white;
     box-shadow: 0 0 10px px gray;
+}
+
+.scoreBoard {
+    border: 5px dashed green;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin: 5px;
+    font-size: 2.5em;
+    background-color: black;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
 }

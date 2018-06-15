@@ -1,70 +1,59 @@
-var yourScore = document.getElementById('usernumWindow');
-    yourScore.innerHTML = 0;
+$(document).ready(function () {
+    var Random = Math.floor(Math.random() * 101 + 19)
+    $('#compNum').text(Random);
 
-var targetScore = document.getElementById('compnumWindow');
-    targetScore.innerHTML = getRandomValue(120, 19);
+    var GeneratedNumbers = []
+    var wins = 0;
+    var losses = 0;
+    var total = 0;
+    $('#numberWins').text(wins);
+    $('#numberLosses').text(losses);
 
-var targetScore = document.getElementById('diamondvalue1');
-    targetScore.innerHTML = getRandomValue(12, 1);
-
-var targetScore = document.getElementById('diamondvalue2');
-    targetScore.innerHTML = getRandomValue(12, 1);
-
-var targetScore = document.getElementById('diamondvalue3');
-    targetScore.innerHTML = getRandomValue(12, 1);
-
-var targetScore = document.getElementById('diamondvalue4');
-    targetScore.innerHTML = getRandomValue(12, 1);
-
-function addToScore(val) {
-    var numberToAdd = parseInt(val);
-    var currentScore = parseInt(yourScore.innerHTML);
-    yourScore.innerHTML = numberToAdd + currentScore;
-}
-
-var diamond1 = document.getElementById("diamond1");
-var diamond2 = document.getElementById("diamond2");
-var diamond3 = document.getElementById("diamond3");
-var diamond4 = document.getElementById("diamond4");
-
-
-
-
-diamond1.addEventListener('click', function () {
-    addToScore(this.value);
-    checkPlayerScore();
-});
-
-
-diamond2.addEventListener('click', function () {
-    addToScore(this.value);
-    checkPlayerScore();
-});
-
-diamond3.addEventListener('click', function () {
-    addToScore(this.value);
-    checkPlayerScore();
-});
-
-diamond4.addEventListener('click', function () {
-    addToScore(this.value);
-    checkPlayerScore();
-});
-
-
-
-function getRandomValue(a, b) {
-    return Math.floor((Math.random() * a) + b);
-}
-
-function checkPlayerScore() {
-    var playerInt = parseInt(yourScore.innerHTML);
-    var targetInt = parseInt(targetScore.innerHTML);
-    if (playerInt === targetInt) {
-        alert('You win!');
-        wins++;
-    } else if (playerInt > targetInt) {
-        alert('You lose!');
-        losses++;
+    function fourRandomNumbers() {
+        for (var i = 0; i < 4; i++) {
+            var num = Math.floor(Math.random() * 11 + 1);
+            GeneratedNumbers.push(num);
+        }
     }
-}
+
+    fourRandomNumbers();
+
+    function reset() {
+        Random = Math.floor(Math.random() * 101 + 19);
+        $('#compNum').text(Random);
+        GeneratedNumbers = [];
+        fourRandomNumbers();
+        total = 0;
+        $('#userNum').text(total);
+    }
+
+    function addWin() {
+        alert("You Win!");
+        wins++;
+        $('#numberWins').text(wins);
+        reset();
+    }
+
+    function addLoss() {
+        alert("You Lose!");
+        losses++;
+        $('#numberLosses').text(losses);
+        reset();
+    }
+
+    $('.diamondbutton').on('click', function() {
+        var elem = $(this);
+        var indx = elem.data('idx');
+
+        total = total + GeneratedNumbers[indx];
+        $('#userNum').text(total);
+
+        if (total == Random) {
+            addWin();
+        }
+        else if (total > Random) {
+            addLoss();
+        }
+    })
+
+});	
