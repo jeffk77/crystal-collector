@@ -23,6 +23,7 @@
     <div class="container">
         <div class="row" id="gamescreen">
 
+            <!-- This section is a sidebar column intended for the logo, and the game rules/instructions -->
             <div class="col-5" id="leftcolumn">
                 <img src="assets/images/crystalcollectorlogo.png" id="logo" />
                 <div class="row" id="scoreboard">
@@ -35,11 +36,13 @@
                         <p>The value of each diamond is hidden from you until you click on it.</p>
                         <p>Each time when the game starts, the game will change the values of each diamond.</p>
                 </div>
+
                 <img src="assets/images/diamondrow.png" id="diamondrow" />
             </div>
 
             <div class="col-7" id="rightcolumn">
 
+                <!-- This section provides a space for the random target number, and the user total number -->
                 <div class="row justify-content-md-center">
                     <div class="col-3 scoreBox">
                         <h6>CPU SCORE</h6>
@@ -55,6 +58,7 @@
                     </div>
                 </div>
 
+                <!-- The "game window" offers up the diamond buttons. This will trigger the added totals to the "userNum" div. -->
                 <div class="row justify-content-md-center" id="gameWindow">
                     <button class="diamondbutton" id="one" data-idx="0">
                         <img src="assets/images/diamond1.png" class="diamondimg">
@@ -72,6 +76,7 @@
                     </button>
                 </div>
 
+                <!-- the scoreBoard div, to track the wins and losses -->
                 <div class="row justify-content-md-center">
                     <div class="col-3 scoreBoard">
                         <h6>WINS</h6>
